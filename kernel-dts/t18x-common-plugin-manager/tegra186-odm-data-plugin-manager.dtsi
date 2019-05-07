@@ -1,7 +1,7 @@
 /*
  * tegra186-odm-data-plugin-manager.dtsi: Tegra186 ODM data P3310 plugin manager
  *
- * Copyright (c) 2015-2018, NVIDIA CORPORATION.  All rights reserved.
+ * Copyright (c) 2015-2019, NVIDIA CORPORATION.  All rights reserved.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -207,6 +207,14 @@
 					};
 				};
 			};
+
+			override@8 {
+				target = <&nvdec>;
+				_overlay_ {
+					nvidia,secure = <0>;
+				};
+			};
+
 		};
 
 		fragement@7 {
